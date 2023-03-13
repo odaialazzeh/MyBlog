@@ -1,5 +1,5 @@
-class PostController < ApplicationController
-  def list
+class PostsController < ApplicationController
+  def index
     @posts = Post.find_by(author_id: params[:id])
   end
 
