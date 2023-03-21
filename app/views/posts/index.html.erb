@@ -11,11 +11,11 @@
   <% if @user.posts.empty? %>
     <p class="empty-message">This user has not written any posts!!!</p>
   <% else %>
-    <% @user.posts.each do |post| %>
+    <% @user.posts.includes(:comments).each do |post| %>
       <%= render post%>
       <% unless post.recent_comments.empty? %>
         <h4 class="users-comments">
-          <% post.recent_comments.each do |comment| %>
+          <% post.recent_comments.includes(:author).each do |comment| %>
             <%= "#{comment.author.name}: #{comment.text}" %><br>
           <% end %>
         </h4>
