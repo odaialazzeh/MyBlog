@@ -109,6 +109,11 @@ Clone this repository to your desired folder:
 - Twitter: [@twitterhandle](https://twitter.com/odaialazzeh4)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/odaialazzeh/)
 
+👤 **Zainab**
+
+- GitHub: [Zainab-Al-Zubair](https://github.com/Zainab-Alzubair)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zainab-al-zubair-bb6777168/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
