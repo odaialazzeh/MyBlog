@@ -1,4 +1,5 @@
 <h3>Here is a single post of a given user</h3>
+<h2><%= "Post ##{@post.id} by #{@post.author.name}"%></h2>
 <div class="show-post">
   <%= render @post %>
     <div class="actions">
@@ -7,7 +8,7 @@
   </div>
   <% unless @post.comments.empty? %>
     <h4 class="users-comments">
-      <% @post.comments.each do |comment| %>
+      <% @post.comments.includes(:author).each do |comment| %>
         <%= "#{comment.author.name}: #{comment.text}" %><br>
       <% end %>
     </h4>
