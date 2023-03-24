@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: 'You are not authorized to access this page.'
   end
 
-
   protected
 
   def update_allowed_parameters
