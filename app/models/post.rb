@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', inverse_of: :posts
-  has_many :comments
-  has_many :likes
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   after_save :update_post_counter
 
@@ -15,5 +15,13 @@ class Post < ApplicationRecord
 
   def update_post_counter
     author.increment!(:post_counter)
+  end
+
+  before_destroy :destroy_comments
+
+  private
+
+  def destroy_comments
+    comments.destroy_all
   end
 end
