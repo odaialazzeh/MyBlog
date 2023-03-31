@@ -30,4 +30,12 @@ class User < ApplicationRecord
   def destroy_posts
     posts.destroy_all
   end
+
+  after_create :send_confirmation_email
+
+  private
+
+  def send_confirmation_email
+    self.send_confirmation_instructions
+  end
 end
