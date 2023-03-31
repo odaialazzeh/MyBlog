@@ -1,9 +1,8 @@
 databases:
   - name: postgres
     ipAllowList: []
-    databaseName: MyBlog
-    user: MyBlog
-
+    databaseName: my_blog
+    user: my_blog_user
 services:
   - type: web
     name: MyBlog
